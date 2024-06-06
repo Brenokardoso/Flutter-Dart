@@ -9,6 +9,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var space = SizedBox(height: 50);
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -26,28 +27,35 @@ class HomePage extends StatelessWidget {
                     builder: (_) => const Page1()),
                 name: 'Pagina1',
               ),
-              const SizedBox(height: 50),
+              space,
               customButtonWidget(
                 () => MaterialPageRoute(
                     settings: const RouteSettings(name: "Page2"),
                     builder: (_) => const Page2()),
                 name: 'Pagina2',
               ),
-              const SizedBox(height: 50),
+              space,
               customButtonWidget(
                 () => MaterialPageRoute(
                     settings: const RouteSettings(name: "Page3"),
                     builder: (_) => const Page3()),
                 name: 'Pagina3',
               ),
-              const SizedBox(height: 50),
+              space,
               customButtonWidget(
                 () => MaterialPageRoute(
                     settings: const RouteSettings(name: "Page4"),
                     builder: (_) => const Page4()),
                 name: 'Pagina4',
               ),
-              const SizedBox(height: 50),
+              space,
+              customButtonWidgetNamed("/Page1", name: 'Pagina - 1'),
+              space,
+              customButtonWidgetNamed("/Page2", name: 'Pagina - 2'),
+              space,
+              customButtonWidgetNamed("/Page3", name: 'Pagina - 3'),
+              space,
+              customButtonWidgetNamed("/Page4", name: 'Pagina - 4')
             ],
           ),
         ),
@@ -61,6 +69,20 @@ Widget customButtonWidget(dynamic route, {required String name}) {
     builder: (context) {
       return ElevatedButton(
         onPressed: () => Navigator.of(context).push(route()),
+        child: Text(
+          " ir para $name",
+          style: const TextStyle(color: Colors.white),
+        ),
+      );
+    },
+  );
+}
+
+Widget customButtonWidgetNamed(String routeNamed, {required String name}) {
+  return Builder(
+    builder: (context) {
+      return ElevatedButton(
+        onPressed: () => Navigator.of(context).pushNamed(routeNamed),
         child: Text(
           " ir para $name",
           style: const TextStyle(color: Colors.white),

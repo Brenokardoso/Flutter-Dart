@@ -22,13 +22,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Academia do Flutter",
       theme: ThemeData.dark(),
-      home: const new_home_page.HomePage(),
+      // home: const old_home_page.HomePage(),
       // home: const ImageHomePage(),
       routes: {
-        "Page1": (context) => const Page1(),
-        "Page2": (context) => const Page2(),
-        "Page3": (context) => const Page3(),
-        "Page4": (context) => const Page4(),
+        "/": (context) => const new_home_page.HomePage(),
+        "/Page1": (context) => const Page1(),
+        "/Page2": (context) => const Page2(),
+        "/Page3": (context) => const Page3(),
+        "/Page4": (context) => const Page4(),
       },
     );
   }
