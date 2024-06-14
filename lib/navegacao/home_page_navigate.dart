@@ -9,55 +9,22 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var space = const SizedBox(height: 50);
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Home Page Navigate'),
+        title: const Text('Home Page'),
       ),
       body: SingleChildScrollView(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              customButtonWidget(
-                () => MaterialPageRoute(
-                    settings: const RouteSettings(name: "Page1",),
-                    builder: (_) => const Page1()),
-                name: 'Pagina1',
-              ),
-              space,
-              customButtonWidget(
-                () => MaterialPageRoute(
-                    settings: const RouteSettings(name: "Page2"),
-                    builder: (_) => const Page2()),
-                name: 'Pagina2',
-              ),
-              space,
-              customButtonWidget(
-                () => MaterialPageRoute(
-                    settings: const RouteSettings(name: "Page3"),
-                    builder: (_) => const Page3()),
-                name: 'Pagina3',
-              ),
-              space,
-              customButtonWidget(
-                () => MaterialPageRoute(
-                    settings: const RouteSettings(name: "Page4"),
-                    builder: (_) => const Page4()),
-                name: 'Pagina4',
-              ),
-              // space,
-              // customButtonWidgetNamed("/Page1", name: 'Pagina - 1'),
-              // space,
-              // customButtonWidgetNamed("/Page2", name: 'Pagina - 2'),
-              // space,
-              // customButtonWidgetNamed("/Page3", name: 'Pagina - 3'),
-              // space,
-              // customButtonWidgetNamed("/Page4", name: 'Pagina - 4')
-            ],
-          ),
+        child: Column(
+          children: [
+            ElevatedButton(
+                onPressed: () =>
+                    Navigator.of(context).pushNamed("old_navigate"),
+                child: const Text("Navegação Básica")),
+            ElevatedButton(
+                onPressed: () => Navigator.of(context).pushNamed(""),
+                child: const Text("Navegação Customizada")),
+          ],
         ),
       ),
     );
@@ -90,4 +57,56 @@ Widget customButtonWidgetNamed(String routeNamed, {required String name}) {
       );
     },
   );
+}
+
+class OldNavigate extends StatelessWidget {
+  const OldNavigate({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    var space = const SizedBox(height: 50);
+
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('navegação antiga'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            customButtonWidget(
+              () => MaterialPageRoute(
+                  settings: const RouteSettings(
+                    name: "Page1",
+                  ),
+                  builder: (_) => const Page1()),
+              name: 'Pagina1',
+            ),
+            space,
+            customButtonWidget(
+              () => MaterialPageRoute(
+                  settings: const RouteSettings(name: "Page2"),
+                  builder: (_) => const Page2()),
+              name: 'Pagina2',
+            ),
+            space,
+            customButtonWidget(
+              () => MaterialPageRoute(
+                  settings: const RouteSettings(name: "Page3"),
+                  builder: (_) => const Page3()),
+              name: 'Pagina3',
+            ),
+            space,
+            customButtonWidget(
+              () => MaterialPageRoute(
+                  settings: const RouteSettings(name: "Page4"),
+                  builder: (_) => const Page4()),
+              name: 'Pagina4',
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }

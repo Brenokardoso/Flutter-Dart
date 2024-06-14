@@ -10,7 +10,7 @@ class DetailPushNamed extends StatefulWidget {
 }
 
 class _DetailPushNamed extends State<DetailPushNamed> {
-  _DetailPushNamed({Key? key});
+  _DetailPushNamed();
 
   @override
   void initState() {
