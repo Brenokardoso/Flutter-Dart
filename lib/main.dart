@@ -1,12 +1,12 @@
 // import 'package:dart_flutter/presenter/pages/home_page.dart';
-import 'package:dart_flutter/navegacao/home_page_navigate.dart'
+import 'package:dart_flutter/navegacao_basica/home_page_navigate.dart'
     as new_home_page;
-import 'package:dart_flutter/navegacao/home_page_navigate.dart';
-import 'package:dart_flutter/navegacao/pages/page1.dart' as navigate;
-import 'package:dart_flutter/navegacao/pages/page2.dart' as navigate;
-import 'package:dart_flutter/navegacao/pages/page3.dart' as navigate;
-import 'package:dart_flutter/navegacao/pages/page4.dart' as navigate;
-import 'package:dart_flutter/navegacao/navegacao_params/detalhes_push_named.dart';
+import 'package:dart_flutter/navegacao_basica/home_page_navigate.dart';
+import 'package:dart_flutter/navegacao_basica/pages/page1.dart' as navigate;
+import 'package:dart_flutter/navegacao_basica/pages/page2.dart' as navigate;
+import 'package:dart_flutter/navegacao_basica/pages/page3.dart' as navigate;
+import 'package:dart_flutter/navegacao_basica/pages/page4.dart' as navigate;
+import 'package:dart_flutter/navegacao_basica/navegacao_params/detalhes_push_named.dart';
 import 'package:flutter/material.dart';
 
 void main() {

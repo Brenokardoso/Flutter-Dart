@@ -1,7 +1,7 @@
-import 'package:dart_flutter/navegacao/pages/page1.dart';
-import 'package:dart_flutter/navegacao/pages/page2.dart';
-import 'package:dart_flutter/navegacao/pages/page3.dart';
-import 'package:dart_flutter/navegacao/pages/page4.dart';
+import 'package:dart_flutter/navegacao_basica/pages/page1.dart';
+import 'package:dart_flutter/navegacao_basica/pages/page2.dart';
+import 'package:dart_flutter/navegacao_basica/pages/page3.dart';
+import 'package:dart_flutter/navegacao_basica/pages/page4.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {

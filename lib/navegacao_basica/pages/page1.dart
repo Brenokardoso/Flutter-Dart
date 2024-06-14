@@ -1,4 +1,4 @@
-import 'package:dart_flutter/navegacao/navegacao_params/detalhe_push.dart';
+import 'package:dart_flutter/navegacao_basica/navegacao_params/detalhe_push.dart';
 import 'package:flutter/material.dart';
 
 class Page1 extends StatelessWidget {
