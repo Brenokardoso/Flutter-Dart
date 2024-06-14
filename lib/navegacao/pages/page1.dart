@@ -1,4 +1,5 @@
 import 'package:dart_flutter/navegacao/home_page_navigate.dart';
+import 'package:dart_flutter/navegacao/navegacao_params/detalhe_push.dart';
 import 'package:flutter/material.dart';
 
 class Page1 extends StatelessWidget {
@@ -13,8 +14,19 @@ class Page1 extends StatelessWidget {
       ),
       body: Center(
         child: FilledButton(
-            onPressed: () => Navigator.of(context).pop(),
-            child: const Text("Voltar")),
+            onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    settings: const RouteSettings(
+                      name: '/Detalhes',
+                      arguments: {
+                        "nome":'breno',
+                        "idade" : 22,
+                      },
+                    ),
+                    builder: (context) => Detail(),
+                  ),
+                ),
+            child: const Text("Ir para detalhamento")),
       ),
     );
   }

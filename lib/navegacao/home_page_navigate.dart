@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var space = SizedBox(height: 50);
+    var space = const SizedBox(height: 50);
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -23,7 +23,7 @@ class HomePage extends StatelessWidget {
             children: [
               customButtonWidget(
                 () => MaterialPageRoute(
-                    settings: const RouteSettings(name: "Page1"),
+                    settings: const RouteSettings(name: "Page1",),
                     builder: (_) => const Page1()),
                 name: 'Pagina1',
               ),
@@ -48,14 +48,14 @@ class HomePage extends StatelessWidget {
                     builder: (_) => const Page4()),
                 name: 'Pagina4',
               ),
-              space,
-              customButtonWidgetNamed("/Page1", name: 'Pagina - 1'),
-              space,
-              customButtonWidgetNamed("/Page2", name: 'Pagina - 2'),
-              space,
-              customButtonWidgetNamed("/Page3", name: 'Pagina - 3'),
-              space,
-              customButtonWidgetNamed("/Page4", name: 'Pagina - 4')
+              // space,
+              // customButtonWidgetNamed("/Page1", name: 'Pagina - 1'),
+              // space,
+              // customButtonWidgetNamed("/Page2", name: 'Pagina - 2'),
+              // space,
+              // customButtonWidgetNamed("/Page3", name: 'Pagina - 3'),
+              // space,
+              // customButtonWidgetNamed("/Page4", name: 'Pagina - 4')
             ],
           ),
         ),
